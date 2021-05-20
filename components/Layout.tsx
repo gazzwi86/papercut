@@ -1,15 +1,23 @@
 import React, { ReactNode } from "react";
-import Link from "next/link";
+import Header from "./Header";
+import Footer from "./Footer";
 import Head from "next/head";
 
-type LayoutProps = {
+interface LayoutProps {
   children?: ReactNode;
   title?: string;
 };
 
+const links = [
+  {
+    text: 'Home',
+    href: '/',
+  },
+]
+
 const Layout: React.FC<LayoutProps> = ({
   children,
-  title = "This is the default title",
+  title = "Welcome to Papercut",
 }) => (
   <div>
     <Head>
@@ -17,18 +25,12 @@ const Layout: React.FC<LayoutProps> = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </nav>
-    </header>
+
+    <Header links={links} />
+    
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
+
+    <Footer />
   </div>
 );
 
