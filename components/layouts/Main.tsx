@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../organisms/Header";
+import Footer from "../organisms/Footer";
 import Head from "next/head";
 
-interface LayoutProps {
+interface MainLayoutProps {
   children?: ReactNode;
   title?: string;
 };
@@ -15,7 +15,7 @@ const links = [
   },
 ]
 
-const Layout: React.FC<LayoutProps> = ({
+const MainLayout: React.FC<MainLayoutProps> = ({
   children,
   title = "Welcome to Papercut",
 }) => (
@@ -34,4 +34,4 @@ const Layout: React.FC<LayoutProps> = ({
   </div>
 );
 
-export default Layout;
+export default MainLayout;

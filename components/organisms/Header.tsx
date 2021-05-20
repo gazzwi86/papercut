@@ -1,5 +1,5 @@
 import React from "react";
-import Link, { LinkProps } from "./Link";
+import Link, { LinkProps } from "../atoms/Link";
 
 interface HeaderProps {
   links: LinkProps[];

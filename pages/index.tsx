@@ -1,12 +1,10 @@
-import Layout from '../components/Layout'
+import MainLayout from '../components/layouts/Main'
+import PrintForm from '../components/organisms/PrintForm'
 
 const IndexPage = () => (
-  <Layout title="Submit print job | Papercut">
-    <h1>Submit a print job</h1>
-    <form>
-
-    </form>
-  </Layout>
+  <MainLayout title="Submit print job | Papercut">
+    <PrintForm />
+  </MainLayout>
 )
 
 export default IndexPage
